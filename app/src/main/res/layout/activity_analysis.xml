@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_gradient_primary"
+            app:titleTextColor="@color/white"
+            app:navigationIconTint="@color/white">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHome"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Home"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_home"
+                app:iconTint="@color/white" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Topic + Saved Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/surface">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:id="@+id/tvTopicTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/text_primary"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipDifficulty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.Material3.Chip.Assist"/>
+                    <TextView
+                        android:id="@+id/tvSaved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✓ Session saved to history"
+                        android:textColor="@color/score_high"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Score Cards Row -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Performance Scores"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Fluency -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/surface">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/progressFluency"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cpb_progressbar_color="@color/primary"
+                            app:cpb_background_progressbar_color="@color/progress_bg"
+                            app:cpb_progressbar_width="8dp"
+                            app:cpb_background_progressbar_width="8dp"
+                            app:cpb_round_border="true"/>
+                        <TextView
+                            android:id="@+id/tvFluencyScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/primary"
+                            android:layout_marginTop="-52dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fluency"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginTop="40dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Confidence -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="3dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/surface">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/progressConfidence"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cpb_progressbar_color="@color/secondary"
+                            app:cpb_background_progressbar_color="@color/progress_bg"
+                            app:cpb_progressbar_width="8dp"
+                            app:cpb_background_progressbar_width="8dp"
+                            app:cpb_round_border="true"/>
+                        <TextView
+                            android:id="@+id/tvConfidenceScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/secondary"
+                            android:layout_marginTop="-52dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Confidence"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginTop="40dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Grammar -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/surface">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/progressGrammar"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cpb_progressbar_color="@color/accent"
+                            app:cpb_background_progressbar_color="@color/progress_bg"
+                            app:cpb_progressbar_width="8dp"
+                            app:cpb_background_progressbar_width="8dp"
+                            app:cpb_round_border="true"/>
+                        <TextView
+                            android:id="@+id/tvGrammarScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/accent"
+                            android:layout_marginTop="-52dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Grammar"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginTop="40dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Stats Row -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/surface">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvDuration" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="00:00"
+                            android:textSize="18sp" android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Duration" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                    <View android:layout_width="1dp" android:layout_height="40dp" android:background="@color/divider"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvWordCount" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0 words"
+                            android:textSize="18sp" android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Word Count" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                    <View android:layout_width="1dp" android:layout_height="40dp" android:background="@color/divider"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvWpm" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0 WPM"
+                            android:textSize="18sp" android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Speaking Rate" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Strengths -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="✅ Strengths" android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/llStrengths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Filler Words -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔤 Filler Words" android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp" android:layout_marginBottom="8dp"/>
+            <TextView android:id="@+id/tvNoFillers" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="🎉 No filler words detected!"
+                android:textColor="@color/score_high" android:textSize="14sp" android:visibility="gone"/>
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupFillers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Grammar Feedback -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📝 Grammar Feedback" android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp" android:layout_marginBottom="8dp"/>
+            <TextView android:id="@+id/tvNoGrammarIssues" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="✨ No grammar issues found!"
+                android:textColor="@color/score_high" android:textSize="14sp" android:visibility="gone"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGrammar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <!-- Next Steps -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🚀 Next Steps" android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp" android:layout_marginBottom="8dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNextSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <!-- Transcript -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📄 Transcript" android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/surface">
+                <TextView
+                    android:id="@+id/tvTranscript"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.6"
+                    android:textColor="@color/text_secondary"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

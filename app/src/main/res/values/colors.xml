@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors -->
+    <color name="primary">#5C6BC0</color>         <!-- Indigo -->
+    <color name="primary_dark">#3949AB</color>
+    <color name="primary_light">#E8EAF6</color>
+    <color name="secondary">#26A69A</color>        <!-- Teal -->
+    <color name="accent">#FF7043</color>           <!-- Deep Orange -->
+
+    <!-- Background / Surface -->
+    <color name="background">#F5F7FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F0F2FF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1F36</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Status / Feedback -->
+    <color name="error">#EF4444</color>
+    <color name="score_high">#22C55E</color>
+    <color name="score_mid">#F59E0B</color>
+    <color name="score_low">#EF4444</color>
+
+    <!-- Grammar type backgrounds -->
+    <color name="tense_bg">#FFF8E1</color>
+    <color name="repetition_bg">#FCE4EC</color>
+    <color name="fragment_bg">#E8F5E9</color>
+    <color name="filler_bg">#E3F2FD</color>
+
+    <!-- Chip colors -->
+    <color name="filler_chip_bg">#FFF3CD</color>
+    <color name="filler_chip_text">#92400E</color>
+    <color name="strength_chip_bg">#D1FAE5</color>
+    <color name="strength_chip_text">#065F46</color>
+
+    <!-- Misc -->
+    <color name="progress_bg">#E5E7EB</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="info_bg">#EEF2FF</color>
+    <color name="opener_bg">#F0FDF4</color>
+
+    <!-- Dark mode colors -->
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary_dark">#F9FAFB</color>
+    <color name="text_secondary_dark">#9CA3AF</color>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SereneMentor</string>
+    <string name="app_tagline">Speak with Confidence</string>
+
+    <!-- Auth -->
+    <string name="login">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+
+    <!-- Dashboard -->
+    <string name="welcome_back">Welcome back!</string>
+    <string name="start_practice">Start Practice</string>
+    <string name="view_history">View Past Sessions</string>
+    <string name="fluency">Fluency</string>
+    <string name="confidence">Confidence</string>
+    <string name="sessions">Sessions</string>
+    <string name="daily_tip">Daily Tip</string>
+
+    <!-- Topic Selection -->
+    <string name="select_category">Select Topic Category</string>
+    <string name="select_difficulty">Difficulty Level</string>
+    <string name="continue_preparation">Continue to Preparation</string>
+
+    <!-- Preparation -->
+    <string name="your_topic">YOUR TOPIC</string>
+    <string name="about_topic">About This Topic</string>
+    <string name="suggested_framework">Suggested Framework</string>
+    <string name="key_points">Key Points to Cover</string>
+    <string name="sample_opener">Sample Opening Statement</string>
+    <string name="start_recording">Start Recording</string>
+
+    <!-- Recording -->
+    <string name="current_topic">Current Topic</string>
+    <string name="tap_to_record">Tap the mic to start recording</string>
+    <string name="listening">Listening&#8230;</string>
+    <string name="processing">Processing&#8230;</string>
+    <string name="recording_stopped">Recording stopped</string>
+    <string name="analyze_speech">Analyze Speech</string>
+    <string name="discard">Discard</string>
+    <string name="live_transcript">Live Transcript</string>
+    <string name="speak_clearly">Speak clearly into your microphone</string>
+    <string name="no_transcript_title">No Speech Detected</string>
+    <string name="no_transcript_message">Please record yourself speaking before analyzing.</string>
+    <string name="discard_title">Discard Recording?</string>
+    <string name="discard_message">Your current recording will be lost.</string>
+
+    <!-- Analysis / Results -->
+    <string name="your_results">Your Results</string>
+    <string name="performance_scores">Performance Scores</string>
+    <string name="fluency_score">Fluency</string>
+    <string name="confidence_score">Confidence</string>
+    <string name="grammar_score">Grammar</string>
+    <string name="duration">Duration</string>
+    <string name="word_count">Word Count</string>
+    <string name="speaking_rate">Speaking Rate</string>
+    <string name="strengths">✅ Strengths</string>
+    <string name="filler_words">🔤 Filler Words</string>
+    <string name="grammar_feedback">📝 Grammar Feedback</string>
+    <string name="next_steps">🚀 Next Steps</string>
+    <string name="transcript">📄 Transcript</string>
+    <string name="no_fillers">🎉 No filler words detected!</string>
+    <string name="no_grammar_issues">✨ No grammar issues found!</string>
+    <string name="session_saved">✓ Session saved</string>
+
+    <!-- History -->
+    <string name="practice_history">Practice History</string>
+    <string name="no_sessions_title">No sessions yet</string>
+    <string name="no_sessions_message">Complete your first practice session to see your history here.</string>
+
+    <!-- Profile -->
+    <string name="avg_fluency">Avg Fluency</string>
+    <string name="avg_confidence">Avg Confidence</string>
+    <string name="sign_out_title">Sign Out</string>
+    <string name="sign_out_message">Are you sure you want to sign out?</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_email">Enter a valid email address</string>
+    <string name="error_short_password">Password must be at least 6 characters</string>
+    <string name="error_passwords_mismatch">Passwords do not match</string>
+    <string name="error_short_name">Enter your full name</string>
+    <string name="error_login_failed">Login failed. Please try again.</string>
+    <string name="error_signup_failed">Signup failed. Please try again.</string>
+    <string name="error_save_session">Could not save session. Check your connection.</string>
+
+    <!-- Permissions -->
+    <string name="permission_audio_title">Microphone Required</string>
+    <string name="permission_audio_message">SereneMentor needs microphone access to analyze your speech. Please grant the permission to continue.</string>
+    <string name="permission_grant">Grant Permission</string>
+
+    <!-- Navigation labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Frameworks -->
+    <string name="framework_prep">PREP Framework</string>
+    <string name="framework_star">STAR Framework</string>
+    <string name="framework_three_point">3-Point Structure</string>
+    <string name="framework_pros_cons">Pros &amp; Cons Analysis</string>
+    <string name="framework_cause_effect">Cause-Effect-Solution</string>
+
+    <!-- Categories -->
+    <string name="category_technology">Technology</string>
+    <string name="category_economy">Economy</string>
+    <string name="category_social">Social Issues</string>
+    <string name="category_abstract">Abstract Topics</string>
+
+    <!-- Difficulty -->
+    <string name="difficulty_beginner">Beginner</string>
+    <string name="difficulty_intermediate">Intermediate</string>
+    <string name="difficulty_advanced">Advanced</string>
+</resources>
